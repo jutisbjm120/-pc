@@ -1,0 +1,967 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>微学习贴</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="public/js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="public/fonts/iconfont.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/app.css" type="text/css" />
+   <link rel="stylesheet" href="card/css/layerout.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="public/js/ie/html5shiv.js"></script>
+    <script src="public/js/ie/respond.min.js"></script>
+    <script src="public/js/ie/excanvas.js"></script>
+  <![endif]-->
+    <script src="public/js/jquery.min.js"></script>
+</head>
+<body class="">
+  <section class="vbox">
+    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-info">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+          <i class="fa fa-bookmark"></i>
+          <span class="hidden-nav-xs m-l-sm font-thin">微学习贴</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="icon-settings"></i>
+        </a>
+      </div>
+        
+        <ul class="nav navbar-nav hidden-xs">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                    <i class="fa fa-th"></i>
+                </a>
+                <section class="dropdown-menu aside-lg bg-white on animated fadeInRight" >
+                    <div class="row m-l-none m-r-none m-t m-b text-center">
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-pencil-square-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习刊</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-laptop fa-2x text-danger-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习贴</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa  fa-folder-open-o fa-2x text-success-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学教材</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-calendar-o fa-2x text-info-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学课程</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-bar-chart-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学测试</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-list-alt fa-2x text-warning-lter"></i>
+                    </span>
+                                    <small class="text-muted">微学应用</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left input-s-lg m-l-n-xs hidden-xs" role="search" style="height: 25px;">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control input-sm btn-rounded" placeholder="搜索...">
+                     <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default btn-sm btn-rounded"><i class="fa fa-search"></i></button>
+                     </span>
+                </div>
+            </div>
+        </form>
+      <div class="navbar-right ">
+        <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+          <li class="hidden-xs">
+            <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
+              <i class="icon-bell"></i>
+              <span class="badge badge-sm up bg-danger">3</span>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">
+                  <li>
+                      <span class="arrow "></span>
+                      <a href="#"><span class="badge bg-danger pull-right">5</span> 系统通知</a>
+                  </li>
+                  <li>
+                      <a href="#"><span class="badge bg-danger pull-right">12</span>私信 </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                           好友请求
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          聊天
+                      </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                      <a href="#">消息设置</a>
+                  </li>
+
+
+              </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="public/images/a0.png" alt="...">
+              </span>
+                            刘语熙 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">            
+              <li>
+                <span class="arrow top"></span>
+                <a href="#">微学习屋</a>
+              </li>
+              <li>
+                <a href="#">账号设置</a>
+              </li>
+              <li>
+                <a href="#">帮助</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="用户登录.html" >退出</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
+    </header>
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-black dk aside hidden-print" id="nav">
+          <section class="vbox"> <section class="w-f-md scrollable hover">
+              <div class="" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs">
+                  <ul class="nav bg clearfix"  data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                          发现
+                    </li>
+                    <li>
+                      <a href="index.html">
+                        <i class="icon-disc icon text-success"></i>
+                        <span class="font-thin">最新推荐</span>
+                      </a>
+                    </li>
+                    <li class="active">
+                      <a href="#">
+                         <!--<span class="pull-right text-muted">
+                          <i class="fa fa-circle-o text-sm text"></i>
+                          <i class="fa fa-circle text-sm text-active"></i>
+                        </span>-->
+                        <i class="icon-book-open icon text-info"></i>
+                        <span class="font-thin">分类发现</span>
+                      </a>
+                        <ul class="nav xz-nav">
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>语文类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>数学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>英语类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>物理类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>化学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>生物类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>历史类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>政治类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>地理类</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                     <!--
+                    <li>
+                      <a href="班级.html">
+                        <i class="icon-users icon text-primary-lter"></i>
+
+                        <span class="font-thin">热门班级</span>
+                      </a>
+                    </li>-->
+
+                    <li class="m-b hidden-nav-xs"></li>
+                  </ul>
+                  <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                       最近在学
+                    </li>
+                     <li >
+                      <a href="贴子详情页.html" class="auto">
+                        <i class="icon-folder-alt icon">
+                        </i>
+                        <span>基本初等函数Ⅰ图像</span>
+                      </a>
+                    </li>
+                      <li >
+                          <a href="贴子详情页.html" class="auto">
+                              <i class="icon-folder-alt icon">
+                              </i>
+                              <span>数列图形图像卡</span>
+                          </a>
+                      </li>
+                      <li>
+                            <a href="贴子详情页.html" class="auto">
+                                <i class="icon-folder-alt icon">
+                                </i>
+                                <span>常用短语学习贴包</span>
+                            </a>
+                        </li>
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+            <footer class="footer hidden-xs no-padder text-center-nav-xs">
+              <div class="bg hidden-xs ">
+                  <div class="dropdown dropup wrapper-sm clearfix">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="thumb-sm avatar pull-left m-l-xs">                        
+                        <img src="public/images/a0.png" class="dker" alt="...">
+                        <i class="on b-black"></i>
+                      </span>
+                      <span class="hidden-nav-xs clear">
+                        <span class="block m-l">
+                          <strong class="font-bold text-lt">刘语熙</strong>
+                          <b class="caret"></b>
+                        </span>
+                        <span class="text-muted text-xs block m-l">持之以恒</span>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight aside text-left">                      
+                      <li>
+                        <span class="arrow bottom hidden-nav-xs"></span>
+                        <a href="#">微学习屋</a>
+                      </li>
+                      <li>
+                        <a href="#">账号设置</a>
+                      </li>
+                      <li>
+                        <a href="#">帮助</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="用户登录.html" >退出</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>            </footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+        <section id="content">
+             <section class="vbox">
+                <section class="scrollable">
+                    <section class="hbox stretch">
+                        <aside class="aside-lg bg-light lter b-r">
+                            <section class="vbox">
+                                <section class="scrollable">
+                                    <div class="wrapper">
+                                        <div class="text-center m-b m-t">
+                                            <a href="个人主页.html" class="thumb-lg">
+                                                <img src="public/images/a0.png" class="img-circle">
+                                            </a>
+                                            <div>
+                                                <div class="h3 m-t-xs m-b-xs">刘语熙 </div>
+                                                <small class="text-muted"><i class="fa fa-map-marker"></i> 郑州外国语中学</small>
+                                            </div>
+                                        </div>
+                                        <div class="panel wrapper">
+                                            <div class="row text-center">
+                                                <div class="col-xs-6">
+                                                    <a href="个人主页：关注列表.html">
+                                                        <span class="m-b-xs h4 block">245</span>
+                                                        <small class="text-muted">关注</small>
+                                                    </a>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <a href="个人主页：关注列表.html">
+                                                        <span class="m-b-xs h4 block">55</span>
+                                                        <small class="text-muted">粉丝</small>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-group btn-group-justified m-b">
+                                            <a class="btn btn-info btn-rounded" data-toggle="button">
+                                                <span class="text">
+                                                  <i class="fa fa-eye"></i> 加关注
+                                                </span>
+                                                <span class="text-active">
+                                                  <i class="fa fa-eye"></i> 已关注
+                                                </span>
+                                            </a>
+                                            <a class="btn btn-dark btn-rounded"  data-toggle="modal" href="#modal">
+                                                <i class="iconfont icon-icon03"></i> 私信
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <small class="text-uc text-xs text-muted">个人标签</small>
+                                            <p><span class="m-r-sm">高中生</span></p>
+                                            <small class="text-uc text-xs text-muted">性别</small>
+                                            <p><span class="m-r-sm">女</span></p>
+                                            <small class="text-uc text-xs text-muted">入学时间</small>
+                                            <p><span class="m-r-sm">2013.9</span></p>
+                                            <small class="text-uc text-xs text-muted">所在地</small>
+                                            <p><span class="m-r-sm">河南省 郑州市 中原区</span></p>
+                                            <small class="text-uc text-xs text-muted">个人简介</small>
+                                            <p style="line-height: 25px;">我的专长是画画和唱歌，在我看来，画画能修身养性，唱歌能陶冶情操……我是一个像向日葵一样追求阳光的女孩，我的人生观是快乐每一天，希望我可以把快乐带给大家!</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </section>
+                        </aside>
+                        <section class="vbox">
+
+                                <section class="scrollable">
+                                    <div class=" col-lg-7" style="padding: 0;">
+                                        <header class="header bg-light" >
+                                            <ul class="nav nav-tabs nav-white" style="position:relative; z-index:99;">
+                                                <li class="active"><a href="#activity" data-toggle="tab">他的动态</a></li>
+                                                <li class=""><a href="#zhuanji" data-toggle="tab">他创建的专辑</a></li>
+                                                <li class=""><a href="#kabao" data-toggle="tab">他创建的贴包</a></li>
+                                                <li class=""><a href="#zanguode" data-toggle="tab">赞过的</a></li>
+                                            </ul>
+                                        </header>
+                                        <div class="tab-content bg-white">
+                                            <div class="tab-pane animated fadeIn active" id="activity">
+                                                <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>收藏了<a href="#" class="dtlink">高中英语语法学习卡专辑</a> </small>
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>关注了<a href="#" class="dtlink">李新华</a> </small>
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>赞了<a href="#" class="dtlink">高中数学易混易错题目贴包</a> </small>
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>收藏了<a href="#" class="dtlink">文化常识贴包</a> </small>
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>发表了话题<a href="#" class="dtlink">暑假去哪里旅游</a> </small>
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>创建了班级<a href="#" class="dtlink">外国语高三1班</a> </small>
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>评论了<a href="#" class="dtlink">化学反应方程式贴包</a> </small>
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>回复了<a href="#" class="dtlink">子轩</a> </small>
+                                                        </p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
+                                                            <img src="public/images/a0.png" class="img-circle">
+                                                        </a>
+                                                        <p class="clear m-b-none">
+                                                            <small class="pull-right" style="color: #999;">3 分钟以前</small>
+                                                            <strong class="block" >刘语熙</strong>
+                                                            <small>收藏了<a href="#" class="dtlink">高中英语语法学习卡专辑</a> </small>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                                <div class=" text-center">
+                                                    <ul class="pagination text-center m-t-sm m-b-none">
+                                                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                                        <li class="active"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane animated fadeIn" id="zhuanji">
+                                                <div class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                                                    <article class="media list-group-item">
+                                                        <a href="专辑页.html" class="pull-left thumb-md m-t-xs" style="width: 100px;">
+                                                            <img src="public/images/a11.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="专辑页.html" class="font-semibold">词语辨析专辑</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                                <a href="#" title="贴包" class="m-l-sm m-r-sm"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="专辑页.html" class="pull-left thumb-md m-t-xs" style="width: 100px;">
+                                                            <img src="public/images/a12.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="专辑页.html" class="font-semibold">文言字词专辑</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                                <a href="#" title="贴包" class="m-l-sm m-r-sm"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="专辑页.html" class="pull-left thumb-md m-t-xs" style="width: 100px;">
+                                                            <img src="public/images/a13.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="专辑页.html" class="font-semibold">名句名篇专辑</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                                <a href="#" title="贴包" class="m-l-sm m-r-sm"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="专辑页.html" class="pull-left thumb-md m-t-xs" style="width: 100px;">
+                                                            <img src="public/images/a14.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="专辑页.html" class="font-semibold">文化常识专辑</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                                <a href="#" title="贴包" class="m-l-sm m-r-sm"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="专辑页.html" class="pull-left thumb-md m-t-xs" style="width: 100px;">
+                                                            <img src="public/images/a15.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="专辑页.html" class="font-semibold">知识概念专辑</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                                <a href="#" title="贴包" class="m-l-sm m-r-sm"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="专辑页.html" class="pull-left thumb-md m-t-xs" style="width: 100px;">
+                                                            <img src="public/images/a12.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="专辑页.html" class="font-semibold">文言字词专辑</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                                <a href="#" title="贴包" class="m-l-sm m-r-sm"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="专辑页.html" class="pull-left thumb-md m-t-xs" style="width: 100px;">
+                                                            <img src="public/images/a14.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="专辑页.html" class="font-semibold">文化常识专辑</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                                <a href="#" title="贴包" class="m-l-sm m-r-sm"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="#" class="pull-left thumb-md m-t-xs" style="width: 100px;">
+                                                            <img src="public/images/a15.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="#" class="font-semibold">知识概念专辑</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                                <a href="#" title="贴包" class="m-l-sm m-r-sm"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class=" text-center">
+                                                    <ul class="pagination text-center m-t-sm m-b-none">
+                                                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                                        <li class="active"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane animated fadeIn" id="kabao">
+                                                <div class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m0.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">几何证明选讲图像</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m1.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">情态动词</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m2.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="#" class="font-semibold">匀变速直线运动研究</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m3.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">新课标全国卷漫画赏析</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m4.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">英语必背句型贴包</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m5.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">元素化合物反应图像贴包</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m6.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">历史人物图像简介贴包</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class=" text-center">
+                                                    <ul class="pagination text-center m-t-sm m-b-none">
+                                                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                                        <li class="active"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane animated fadeIn" id="zanguode">
+                                                <div class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                                                     <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m4.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">英语必背句型贴包</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                  
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m2.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="#" class="font-semibold">匀变速直线运动研究</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m0.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">几何证明选讲图像</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m3.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">新课标全国卷漫画赏析</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                   
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m5.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">元素化合物反应图像贴包</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="media list-group-item">
+                                                        <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs" style="width: 60px;">
+                                                            <img src="public/images/m6.jpg">
+                                                        </a>
+                                                        <div class="media-body">
+                                                            <a href="贴子详情页.html" class="font-semibold">历史人物图像简介贴包</a>
+                                                            <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                            <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                                <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                                
+                                                                <a href="#" title="收藏"><i class="fa fa-star-o text"></i> 150</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class=" text-center">
+                                                    <ul class="pagination text-center m-t-sm m-b-none">
+                                                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                                        <li class="active"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-lg-5" style="padding-right: 0">
+                                        <section class="panel panel-default m-t">
+                                            <header class="panel-heading"><strong>他的班级</strong></header>
+
+                                            <div class="panel-body" style="padding: 0;">
+                                                <ul class="friend_ul">
+                                                    <li><a href="班级主页.html" title="班级名称"><img src="public/images/szxw (1).jpg" class="img-rad0"/> </a><span>时政新闻天天学</span></li>
+                                                    <li><a href="班级主页.html" title="班级名称"><img src="public/images/szxw (2).jpg" class="img-rad0"/> </a><span>外国语高三2班forever</span></li>
+                                                    <li><a href="班级主页.html" title="班级名称"><img src="public/images/szxw (3).jpg" class="img-rad0"/> </a><span>英语学习兴趣小组 </span></li>
+                                                </ul>
+
+                                            </div>
+                                        </section>
+                                        <section class="panel panel-default m-t">
+                                            <header class="panel-heading"><strong>共同好友</strong></header>
+
+                                            <div class="panel-body" style="padding: 0;">
+                                                <ul class="friend_ul">
+                                                    <li><a href="个人主页.html" title="成员名称"><img src="public/images/a9.png"/> </a><span>丁艳</span></li>
+                                                    <li><a href="个人主页.html" title="成员名称"><img src="public/images/a1.png"/> </a><span>李新华</span></li>
+                                                    <li><a href="个人主页.html" title="成员名称"><img src="public/images/a0.png"/> </a><span>王晓琳</span></li>
+                                                    <li><a href="个人主页.html" title="成员名称"><img src="public/images/a4.png"/> </a><span>胡瑞华</span></li>
+                                                    <li><a href="个人主页.html" title="成员名称"><img src="public/images/a5.png"/> </a><span>李珍珍</span></li>
+                                                    <li><a href="个人主页.html" title="成员名称"><img src="public/images/a6.png"/> </a><span>王艳芳</span></li>
+                                                </ul>
+
+                                            </div>
+                                        </section>
+                                    </div>
+                                </section>
+
+                            </section>
+
+                    </section>
+
+                </section>
+            <!-- side content -->
+
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <!-- Bootstrap -->
+  <script src="public/js/bootstrap.js"></script>
+  <!-- App -->
+
+  <script src="public/js/app.js"></script>
+  <script src="public/js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="public/js/masonry/tiles.min.js"></script>
+  <script src="public/js/masonry/demo.js"></script>
+  <script src="public/js/app.plugin.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/demo.js"></script>
+
+  <!-- 弹出层 -->
+  <div id="modal" class="modal fade" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                  <h4 class="modal-title">私信 TA</h4>
+              </div>
+              <div class="modal-body">
+
+                  <form class="uk-form uk-form-horizontal">
+                      <table style="width:95%; margin: 10px auto; ">
+                          <tr>
+                              <td width="50" class="v-top">内容</td>
+                              <td><textarea class="form-control" rows="5" placeholder=""></textarea></td>
+                          </tr>
+
+                          <tr>
+                              <td width="50" height="70"></td>
+                              <td class="text-right"><button class="btn btn-info " type="button"> 发送 </button></td>
+                          </tr>
+
+                      </table>
+
+                  </form>
+
+              </div>
+
+          </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+  </div>
+</body>
+</html>

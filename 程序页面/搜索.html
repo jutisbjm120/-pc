@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>微学习贴</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="public/js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="public/fonts/iconfont.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/app.css" type="text/css" />
+   <link rel="stylesheet" href="card/css/layerout.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="public/js/ie/html5shiv.js"></script>
+    <script src="public/js/ie/respond.min.js"></script>
+    <script src="public/js/ie/excanvas.js"></script>
+  <![endif]-->
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/superslide.2.1.js"></script>
+</head>
+<body class="">
+  <section class="vbox">
+    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-info">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+          <i class="fa fa-bookmark"></i>
+          <span class="hidden-nav-xs m-l-sm font-thin">微学习贴</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="icon-settings"></i>
+        </a>
+      </div>
+        
+        <ul class="nav navbar-nav hidden-xs">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                    <i class="fa fa-th"></i>
+                </a>
+                <section class="dropdown-menu aside-lg bg-white on animated fadeInRight" >
+                    <div class="row m-l-none m-r-none m-t m-b text-center">
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-pencil-square-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习刊</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-laptop fa-2x text-danger-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习贴</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa  fa-folder-open-o fa-2x text-success-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学教材</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-calendar-o fa-2x text-info-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学课程</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-bar-chart-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学测试</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-list-alt fa-2x text-warning-lter"></i>
+                    </span>
+                                    <small class="text-muted">微学应用</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left input-s-lg m-l-n-xs hidden-xs" role="search" style="height: 25px;">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control input-sm btn-rounded" placeholder="搜索...">
+                     <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default btn-sm btn-rounded"><i class="fa fa-search"></i></button>
+                     </span>
+                </div>
+            </div>
+        </form>
+      <div class="navbar-right ">
+        <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+          <li class="hidden-xs">
+            <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
+              <i class="icon-bell"></i>
+              <span class="badge badge-sm up bg-danger">3</span>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">
+                  <li>
+                      <span class="arrow "></span>
+                      <a href="#"><span class="badge bg-danger pull-right">5</span> 系统通知</a>
+                  </li>
+                  <li>
+                      <a href="#"><span class="badge bg-danger pull-right">12</span>私信 </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                           好友请求
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          聊天
+                      </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                      <a href="#">消息设置</a>
+                  </li>
+
+
+              </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="public/images/a0.png" alt="...">
+              </span>
+                            刘语熙 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">            
+              <li>
+                <span class="arrow top"></span>
+                <a href="#">微学习屋</a>
+              </li>
+              <li>
+                <a href="#">账号设置</a>
+              </li>
+              <li>
+                <a href="#">帮助</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="modal.lockme.html">退出</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
+    </header>
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-black dk aside hidden-print" id="nav">
+          <section class="vbox"> <section class="w-f-md scrollable hover">
+              <div class="" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs">
+                  <ul class="nav bg clearfix"  data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                          发现
+                    </li>
+                    <li>
+                      <a href="index.html">
+                        <i class="icon-disc icon text-success"></i>
+                        <span class="font-thin">最新推荐</span>
+                      </a>
+                    </li>
+                    <li class="active">
+                      <a href="#">
+                         <!--<span class="pull-right text-muted">
+                          <i class="fa fa-circle-o text-sm text"></i>
+                          <i class="fa fa-circle text-sm text-active"></i>
+                        </span>-->
+                        <i class="icon-book-open icon text-info"></i>
+                        <span class="font-thin">分类发现</span>
+                      </a>
+                        <ul class="nav xz-nav">
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>语文类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>数学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>英语类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>物理类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>化学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>生物类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>历史类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>政治类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>地理类</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                     <!--
+                    <li>
+                      <a href="班级.html">
+                        <i class="icon-users icon text-primary-lter"></i>
+
+                        <span class="font-thin">热门班级</span>
+                      </a>
+                    </li>-->
+
+                    <li class="m-b hidden-nav-xs"></li>
+                  </ul>
+                  <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                       最近在学
+                    </li>
+                     <li >
+                      <a href="贴子详情页.html" class="auto">
+                        <i class="icon-folder-alt icon">
+                        </i>
+                        <span>基本初等函数Ⅰ图像</span>
+                      </a>
+                    </li>
+                      <li >
+                          <a href="贴子详情页.html" class="auto">
+                              <i class="icon-folder-alt icon">
+                              </i>
+                              <span>数列图形图像卡</span>
+                          </a>
+                      </li>
+                      <li>
+                            <a href="贴子详情页.html" class="auto">
+                                <i class="icon-folder-alt icon">
+                                </i>
+                                <span>常用短语学习贴包</span>
+                            </a>
+                        </li>
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+            <footer class="footer hidden-xs no-padder text-center-nav-xs">
+              <div class="bg hidden-xs ">
+                  <div class="dropdown dropup wrapper-sm clearfix">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="thumb-sm avatar pull-left m-l-xs">                        
+                        <img src="public/images/a0.png" class="dker" alt="...">
+                        <i class="on b-black"></i>
+                      </span>
+                      <span class="hidden-nav-xs clear">
+                        <span class="block m-l">
+                          <strong class="font-bold text-lt">刘语熙</strong>
+                          <b class="caret"></b>
+                        </span>
+                        <span class="text-muted text-xs block m-l">持之以恒</span>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight aside text-left">                      
+                      <li>
+                        <span class="arrow bottom hidden-nav-xs"></span>
+                        <a href="#">微学习屋</a>
+                      </li>
+                      <li>
+                        <a href="#">账号设置</a>
+                      </li>
+                      <li>
+                        <a href="#">帮助</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="modal.lockme.html" >退出</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>            </footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+        <section id="content">
+          <section class="hbox stretch">
+          <aside class="aside bg-light dk" id="sidebar">
+              <section class="vbox animated fadeInUp">
+                  <section class="scrollable hover">
+                      <div class="list-group no-radius no-border no-bg m-t-n-xxs m-b-none auto">
+                          <a href="#" class="list-group-item">搜索历史</a>
+                          <a href="#" class="list-group-item active">高中语文难点</a>
+                          <a href="#" class="list-group-item">高三英语复习</a>
+                          <a href="#" class="list-group-item">英语听力练习</a>
+                          <a href="#" class="list-group-item ">高中语文难点</a>
+                          <a href="#" class="list-group-item">高三英语复习</a>
+                          <a href="#" class="list-group-item">英语听力练习</a>
+                          <a href="#" class="list-group-item ">高中语文难点</a>
+                          <a href="#" class="list-group-item">高三英语复习</a>
+                          <a href="#" class="list-group-item">英语听力练习</a>
+
+                      </div>
+                      <p class="text-center m-t"><button class="btn btn-default">清空历史记录</button></p>
+
+                  </section>
+              </section>
+          </aside>
+          <!-- / side content -->
+            <section>
+              <section class="vbox">
+                <section class="scrollable padder-lg">
+                     <div class="m-t">
+                        <h3 style="margin-top: 10px;" class="pull-left">搜索结果</h3>
+                        <div class="pull-right choice-menu">
+                            <span class=" pull-left" style="line-height: 30px;">筛选&nbsp;&nbsp;</span>
+                            <ul class="pull-left chm-ul">
+                                <li class="nLi ">
+                                    <a href="#" class="pull-left btn-default btn btn-sm">按模型</a>
+                                    <div class="chm-fenl b-light panel-default">
+
+                                            <a class="current">不限</a>
+                                            <a href="#">雅词卡</a>
+                                            <a href="#">美句卡</a>
+                                            <a href="#">精段卡</a>
+                                            <a href="#">常识卡</a>
+                                            <a href="#">识字卡</a>
+                                            <a href="#">词语辨析卡</a>
+                                            <a href="#">易混字卡</a>
+
+                                    </div>
+                                </li>
+                                <li class="nLi ">
+                                    <a href="#" class="pull-left btn-default btn btn-sm">按热度</a>
+                                    <div class="chm-fenl">
+
+                                        <a class="current">不限</a>
+                                        <a href="#">最新上线</a>
+                                        <a href="#">最受欢迎</a>
+                                        <a href="#">最多收藏</a>
+
+                                    </div>
+                                </li>
+                                <li class="nLi ">
+                                    <a href="#" class="pull-left btn-default btn btn-sm">按版本</a>
+                                    <div class="chm-fenl">
+
+                                            <a class="current">不限</a>
+                                            <a href="#">人教版</a>
+                                            <a href="#">外教版</a>
+                                            <a href="#">牛津版</a>
+
+                                    </div>
+                                </li>
+                                <li class="nLi ">
+                                    <a href="#" class="pull-left btn-default btn btn-sm">按难度</a>
+                                    <div class="chm-fenl">
+
+                                            <a class="current">不限</a>
+                                            <a href="#">简单</a>
+                                            <a href="#">中等</a>
+                                            <a href="#">困难</a>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <script id="jsID" type="text/javascript">
+
+                            jQuery(".choice-menu").slide({
+                                type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                                titCell:".nLi", //鼠标触发对象
+                                targetCell:".chm-fenl", //titCell里面包含的要显示/消失的对象
+                                effect:"left", //targetCell下拉效果
+                                delayTime:300 , //效果时间
+                                triggerTime:0//鼠标延迟触发时间（默认150）
+                            });
+                        </script>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="row row-sm">
+
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="贴子详情页.html">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm xztext-12 text-center">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m21.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="贴子详情页.html">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm xztext-12 text-center">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m15.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="贴子详情页.html">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm xztext-12 text-center">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m5.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm xztext-12 text-center">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m16.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm xztext-12 text-center">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m13.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm xztext-12 text-center">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m8.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm xztext-12 text-center">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m7.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm xztext-12 text-center">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m19.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm text-sm text-center xztext-12">
+                                            <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                            <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                            <a href="#" class="m-l-sm" data-toggle="class" title="收藏">
+                                            <i class="fa fa-star-o text"></i>
+                                            <i class="fa fa-star text-active text-danger"></i>
+                                            150
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m14.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm text-center xztext-12">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m12.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm text-center xztext-12">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m5.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2-4">
+                            <div class="item">
+                                <div class="pos-rlt">
+
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <a href="#">
+                                            <div class="center text-center m-t-n">
+                                                <i class="fa fa-play-circle i-2x"></i>
+                                            </div>
+                                        </a>
+                                        <div class="bottom padder m-b-sm text-center xztext-12">
+                                            <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                            
+                                            <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                        </div>
+                                    </div>
+                                    <a href="#"><img src="public/images/m7.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                    <a href="#" class="text-ellipsis">高中英语常用短语记忆卡贴包</a>
+                                    <a href="#" class="text-ellipsis text-xs text-muted">创建人：sunny</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="pagination pagination">
+                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                    </ul>
+
+                </section>
+
+              </section>
+            </section>
+            <!-- side content -->
+
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <!-- Bootstrap -->
+  <script src="public/js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="public/js/app.js"></script>
+  <script src="public/js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="public/js/app.plugin.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/demo.js"></script>
+</body>
+</html>

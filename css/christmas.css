@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* 锚点带动画跳转和返回顶部 */
+
+
+.row-gundong:after {
+    clear:both;
+    content:'\0020';
+    display:block;
+    height:0;    
+}
+.row-gundong {
+    zoom:1;
+}
+/* end reset */
+.row-gundong{
+    width:auto;
+    margin:0 auto;
+}
+
+/*页面*/
+.h15{height: 15px; overflow: hidden;}
+.mainpage{width: 640px; height:600px;}
+h2{font-size: 24px; text-align: center; color: #333; font-weight: bold;}
+.mainpage p{width: 650px; margin: 0 auto; color: #fff; font-size: 16px; padding: 50px 0 50px;}
+.mainpage1{background: #fe6400;}
+.mainpage2{background: #be0000;}
+.mainpage3{background: #ccc;}
+.mainpage4{background: #0093dd;}
+.mainpage5{background: #a8cf33;}
+ *html{background-image:url(about:blank);background-attachment:fixed;}/*低版本浏览器防止抖动的，必须有*/

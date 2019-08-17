@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>微学习贴</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="public/js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="public/fonts/iconfont.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/app.css" type="text/css" />
+   <link rel="stylesheet" href="card/css/layerout.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="public/js/ie/html5shiv.js"></script>
+    <script src="public/js/ie/respond.min.js"></script>
+    <script src="public/js/ie/excanvas.js"></script>
+  <![endif]-->
+    <script src="public/js/jquery.min.js"></script>
+    <script>
+        function tab (mod,cursor,n,num,c1,c2){
+            for(i=1;i<=n;i++){
+                var nav=document.getElementById(mod+i);
+                var cont=document.getElementById(mod+"_"+"cont"+i);
+                nav.className=(i==cursor)?c1:c2;
+                cont.style.display=(i==cursor)?"block":"none";
+            }
+        }
+    </script>
+    <!-- syntaxHilighter style sheet -->
+    <link rel="stylesheet" type="text/css" href="slider/assets/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="slider/assets/syntax-highlighter/styles/shThemeDefault.css" media="all">
+    <!-- main style -->
+    <!-- Base MasterSlider style sheet -->
+    <link rel="stylesheet" href="slider/masterslider/style/masterslider.css" />
+    <!-- Master Slider Skin -->
+    <link href="slider/masterslider/skins/black-2/style.css" rel='stylesheet' type='text/css'>
+    <!-- MasterSlider Template Style -->
+    <link href='style/ms-layers-style.css' rel='stylesheet' type='text/css'>
+    <script src="slider/masterslider/jquery.easing.min.js"></script>
+    <!-- Master Slider -->
+    <script src="slider/masterslider/masterslider.min.js"></script>
+    <!-- Tabs -->
+    <script src="slider/assets/js/tab.js"></script>
+    <script src="slider/assets/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="slider/assets/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="slider/assets/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="slider/assets/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</head>
+<body class="">
+  <section class="vbox">
+    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-info">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+          <i class="fa fa-bookmark"></i>
+          <span class="hidden-nav-xs m-l-sm font-thin">微学习贴</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="icon-settings"></i>
+        </a>
+      </div>
+        <ul class="nav navbar-nav hidden-xs">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                    <i class="fa fa-th"></i>
+                </a>
+                <section class="dropdown-menu aside-lg bg-white on animated fadeInRight" >
+                    <div class="row m-l-none m-r-none m-t m-b text-center">
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                                    <span class="m-b-xs block">
+                                      <i class="fa fa-pencil-square-o fa-2x text-primary-lt"></i>
+                                    </span>
+                                    <small class="text-muted">微学习刊</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-laptop fa-2x text-danger-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习贴</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa  fa-folder-open-o fa-2x text-success-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学教材</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-calendar-o fa-2x text-info-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学课程</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-bar-chart-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学测试</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-list-alt fa-2x text-warning-lter"></i>
+                    </span>
+                                    <small class="text-muted">微学应用</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left input-s-lg m-l-n-xs hidden-xs" role="search" style="height: 25px;">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control input-sm btn-rounded" placeholder="搜索">
+                     <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default btn-sm btn-rounded"><i class="fa fa-search"></i></button>
+                     </span>
+                </div>
+            </div>
+        </form>
+      <div class="navbar-right ">
+        <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+          <li class="hidden-xs">
+            <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
+              <i class="icon-bell"></i>
+              <span class="badge badge-sm up bg-danger">3</span>
+            </a>
+              <ul class="dropdown-menu animated fadeInRight">
+                  <li>
+                      <span class="arrow "></span>
+                      <a href="#"><span class="badge bg-danger pull-right">5</span> 系统通知</a>
+                  </li>
+                  <li>
+                      <a href="#"><span class="badge bg-danger pull-right">12</span>私信 </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                           好友请求
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          聊天
+                      </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                      <a href="#">消息设置</a>
+                  </li>
+
+
+              </ul>
+          </li>
+          <li class="dropdown">
+            <a href="个人主页.html" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="public/images/a0.png" alt="slider.">
+              </span>
+                            刘语熙 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">            
+              <li>
+                <span class="arrow top"></span>
+                <a href="#">微学习屋</a>
+              </li>
+              <li>
+                <a href="#">账号设置</a>
+              </li>
+              <li>
+                <a href="#">帮助</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="用户登录.html" >退出</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
+    </header>
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-black dk aside hidden-print" id="nav">
+          <section class="vbox"> <section class="w-f-md scrollable hover">
+              <div class="" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs ">
+                  <ul class="nav bg clearfix "  data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                          发现
+                    </li>
+                    <li>
+                      <a href="index.html">
+                        <i class="icon-disc icon text-success"></i>
+                        <span class="font-thin">最新推荐</span>
+                      </a>
+                    </li>
+                    <li class="active" >
+                      <a href="#">
+                         <!--<span class="pull-right text-muted">
+                          <i class="fa fa-circle-o text-sm text"></i>
+                          <i class="fa fa-circle text-sm text-active"></i>
+                        </span>-->
+                        <i class="icon-book-open icon text-info"></i>
+                        <span class="font-thin">分类发现</span>
+                      </a>
+                        <ul class="nav xz-nav">
+                            <li>
+                                <a  href="科目分类.html" class="auto">
+                                    <span>语文类</span>
+                                </a>
+                                
+                               <!--<ul class="nav" style="text-indent:23px;">
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修1</span>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修2</span>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修3</span>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修4</span>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修5</span>
+                                        </a>
+                                    </li>
+                                </ul>-->
+                                
+                                
+                            </li>
+
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>数学类</span>
+                                </a>
+                               <!-- <ul class="nav" style="text-indent:23px;">
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修1</span>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修2</span>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修3</span>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修4</span>
+                                        </a>
+                                    </li>
+                                    <li >
+                                        <a href="科目分类.html">
+                                            <span><i class="fa fa-angle-right"></i> 高中语文必修5</span>
+                                        </a>
+                                    </li>
+                                </ul>-->
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>英语类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>物理类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>化学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>生物类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>历史类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>政治类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>地理类</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                     <!--
+                    <li>
+                      <a href="班级.html">
+                        <i class="icon-users icon text-primary-lter"></i>
+
+                        <span class="font-thin">热门班级</span>
+                      </a>
+                    </li>-->
+
+                    <li class="m-b hidden-nav-xs"></li>
+                  </ul>
+                  <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                       最近在学
+                    </li>
+                     <li >
+                      <a href="贴子详情页.html" class="auto">
+                        <i class="icon-folder-alt icon">
+                        </i>
+                        <span>基本初等函数Ⅰ图像</span>
+                      </a>
+                    </li>
+                      <li >
+                          <a href="贴子详情页.html" class="auto">
+                              <i class="icon-folder-alt icon">
+                              </i>
+                              <span>数列图形图像卡</span>
+                          </a>
+                      </li>
+                      <li>
+                            <a href="贴子详情页.html" class="auto">
+                                <i class="icon-folder-alt icon">
+                                </i>
+                                <span>常用短语学习贴包</span>
+                            </a>
+                        </li>
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+            <footer class="footer hidden-xs no-padder text-center-nav-xs">
+              <div class="bg hidden-xs ">
+                  <div class="dropdown dropup wrapper-sm clearfix">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="thumb-sm avatar pull-left m-l-xs">                        
+                        <img src="public/images/a0.png" class="dker" alt="slider.">
+                       
+                      </span>
+                      <span class="hidden-nav-xs clear">
+                        <span class="block m-l">
+                          <strong class="font-bold text-lt">刘语熙</strong>
+                          <b class="caret"></b>
+                        </span>
+                        <span class="text-muted text-xs block m-l">持之以恒</span>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight aside text-left">                      
+                      <li>
+                        <span class="arrow bottom hidden-nav-xs"></span>
+                        <a href="#">微学习屋</a>
+                      </li>
+                      <li>
+                        <a href="#">账号设置</a>
+                      </li>
+                      <li>
+                        <a href="#">帮助</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="用户登录.html" >退出</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>            </footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+        <section id="content">
+          <section class="hbox stretch">
+            <section>
+              <section class="vbox">
+                <section class="scrollable padder-lg w-f-md" id="bjax-target" style="bottom: 0">
+                    <div class="row-2 m-t">
+                        <div class="master-slider ms-skin-black-2 round-skin" id="masterslider">
+                            <div class="ms-slide slide-1" style="z-index: 10">
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/1bg.jpg" alt="lorem ipsum dolor sit"/>
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/1phone.png" alt="layer" class="ms-layer"
+                                      style="top:10px; left:100px"
+                                     data-effect="left(40)"
+                                     data-type="image"
+                                        />
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/1zi.png" alt="layer" class="ms-layer"
+                                    style="top:160px; right:280px"
+                                     data-effect="right(40)"
+                                     data-type="image"
+                                />
+                            </div>
+                            
+                            
+                            <div class="ms-slide slide-2" style="z-index: 11">
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/2bg.jpg" alt="lorem ipsum dolor sit"/>
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/2phone.png" alt="layer" class="ms-layer"
+                                    style="top:20px; left:10px"
+                                     data-effect="rotateleft(10,50,bl)"
+                                     data-duration="2000"
+                                     data-ease="easeOutQuad"
+                                     data-type="image"
+                                        />
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/2zi.png" alt="layer" class="ms-layer"
+                                   style="top:160px; left:626px"
+                                     data-effect="rotateright(10,50,bl)"
+                                     data-duration="2000"
+                                     data-ease="easeOutQuad"
+                                     data-type="image"
+                                />
+                            </div>
+                            
+                            <div class="ms-slide slide-3" style="z-index: 12">
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/3bg.jpg" alt="lorem ipsum dolor sit"/>
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/3phone.png" alt="layer" class="ms-layer"
+                                    style="top:10px; left:20px"
+                                     data-effect="rotate3dleft(0,30,0,50,r)"
+                                     data-duration="2500"
+                                     data-ease="easeOutQuad"
+                                     data-type="image"
+                                        />
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/3zi.png" alt="layer" class="ms-layer"
+                                   style="top:150px; right:120px"
+                                     data-effect="rotate3dright(0,30,0,50,r)"
+                                     data-duration="2000"
+                                     data-ease="easeOutQuad"
+                                     data-type="image"
+                                />
+                            </div>
+                            
+                             <div class="ms-slide slide-4" style="z-index: 13">
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/4bg.jpg" alt="lorem ipsum dolor sit"/>
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/4phone.png" alt="layer" class="ms-layer"
+                                     style="top:15px; left:60px"
+                                     data-effect="top(50)"
+                                     data-duration="2000"
+                                     data-ease="easeOutExpo"
+                                     data-type="image"
+                                        />
+                                <img src="slider/masterslider/style/blank.gif" data-src="card/images/4zi.png" alt="layer" class="ms-layer"
+                                     style="top:85px; right:180px"
+                                     data-effect="bottom(50)"
+                                     data-duration="2000"
+                                     data-ease="easeOutExpo"
+                                     data-type="image"
+                                />
+                            </div>
+                            
+
+                          
+                           
+                        </div>
+                        <!-- end of masterslider -->
+                    </div>
+                    <ul class="fenl_tab row row-sm">
+                        <li class="on1"><a href="科目分类.html" class=" b-l"><i class="iconfont icon-yuwen block"></i>语文</a></li>
+                        <li class="on2"><a href="科目分类.html" class="b-l"><i class="iconfont icon-jisuanline block"></i>数学</a></li>
+                        <li class="on3"><a href="科目分类.html" class="b-l"><i class="iconfont icon-en block"></i>英语</a></li>
+                        <li class="on4"><a href="科目分类.html" class="b-l"><i class="iconfont icon-atom block"></i>物理</a></li>
+                        <li class="on5"><a href="科目分类.html" class="b-l"><i class="iconfont icon-icon block"></i>化学</a></li>
+                        <li class="on6"><a href="科目分类.html" class="b-l"><i class="iconfont icon-microscope block"></i>生物</a></li>
+                        <li class="on7"><a href="科目分类.html" class="b-l"><i class="iconfont icon-lishijilu1 block"></i>历史</a></li>
+                        <li class="on8"><a href="科目分类.html" class="b-l"><i class="iconfont icon-diliweizhi block"></i>地理</a></li>
+                        <li class="on9"><a href="科目分类.html" class="b-l b-r"><i class="iconfont icon-wenjubangongwubeijing01 block"></i>政治</a></li>
+                        <li class="on5"><a href="科目分类.html" class="b-l"><i class="icon-book-open block" style="padding: 5px 0; font-size: 18px;"></i>阅读</a></li>
+                    </ul>
+                    <div class="row">
+                        <h3 class="font-thin col-lg-2">推荐专辑</h3>
+                        <ul class="col-lg-10 rec-div m-t-sm ">
+                            <li class="active"><a href="#recom1" data-toggle="tab">最新上线</a></li>
+                            <li><a href="#recom2" data-toggle="tab">最受欢迎</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <div class="tab-content">
+                            <div class="tab-pane active animated fadeIn" id="recom1">
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                               <a href="专辑页.html">
+                                                 <div class="center text-center m-t-n">
+                                                   <i class="iconfont icon-biji01 i-2x"></i>
+                                                </div>
+                                                </a>
+                                                <div class="bottom padder m-b-sm text-sm text-center">
+                                                    <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                    <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                    <a href="#" class="m-l-sm" title="收藏">
+                                                        <i class="fa fa-star-o text"></i>
+                                                        <i class="fa fa-star text-active text-danger"></i>
+                                                        150
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="top">
+                                                <span class="badge bg-info m-t-sm m-r-sm pull-right">免费</span>
+                                            </div>
+                                            <a href="专辑页.html"><img src="public/images/a12.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="专辑页.html" class="text-ellipsis">文言字词专辑</a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="专辑页.html">
+                                                 <div class="center text-center m-t-n">
+                                                   <i class="iconfont icon-biji01 i-2x"></i>
+                                                </div>
+                                                </a>
+                                                <div class="bottom padder m-b-sm text-sm text-center">
+                                                    <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                    <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                    <a href="#" class="m-l-sm" title="收藏">
+                                                        <i class="fa fa-star-o text"></i>
+                                                        <i class="fa fa-star text-active text-danger"></i>
+                                                        150
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="top">
+                                                <span class="badge bg-info m-t-sm m-r-sm pull-right">免费</span>
+                                            </div>
+                                            <a href="#"><img src="public/images/a13.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="专辑页.html" class="text-ellipsis">名句名篇专辑</a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a5.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="专辑页.html">
+                                                 <div class="center text-center m-t-n">
+                                                   <i class="iconfont icon-biji01 i-2x"></i>
+                                                </div>
+                                                </a>
+                                                <div class="bottom padder m-b-sm text-sm text-center">
+                                                    <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                    <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                    <a href="#" class="m-l-sm" title="收藏">
+                                                        <i class="fa fa-star-o text"></i>
+                                                        <i class="fa fa-star text-active text-danger"></i>
+                                                        150
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="top">
+                                                <span class="badge bg-info m-t-sm m-r-sm pull-right">免费</span>
+                                            </div>
+                                            <a href="专辑页.html"><img src="public/images/a14.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="专辑页.html" class="text-ellipsis">文化常识专辑</a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a3.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="专辑页.html">
+                                                 <div class="center text-center m-t-n">
+                                                   <i class="iconfont icon-biji01 i-2x"></i>
+                                                </div>
+                                                </a>
+                                                <div class="bottom padder m-b-sm text-sm text-center">
+                                                    <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                    <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                    <a href="#" class="m-l-sm" title="收藏">
+                                                        <i class="fa fa-star-o text"></i>
+                                                        <i class="fa fa-star text-active text-danger"></i>
+                                                        150
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="top">
+                                                <span class="badge bg-info m-t-sm m-r-sm pull-right">免费</span>
+                                            </div>
+                                            <a href=" 专辑页.html"><img src="public/images/a39.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="专辑页.html" class="text-ellipsis">词语辨析专辑 </a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a4.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane animated fadeIn" id="recom2">
+
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="专辑页.html">
+                                                    <div class="center text-center m-t-n">
+                                                        <i class="iconfont icon-biji01 i-2x"></i>
+                                                    </div>
+                                                </a>
+                                                <div class="bottom padder m-b-sm text-sm text-center">
+                                                    <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                    <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                    <a href="#" class="m-l-sm" title="收藏">
+                                                        <i class="fa fa-star-o text"></i>
+                                                        <i class="fa fa-star text-active text-danger"></i>
+                                                        150
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="top">
+                                                <span class="badge bg-info m-t-sm m-r-sm pull-right">免费</span>
+                                            </div>
+                                            <a href="专辑页.html"><img src="public/images/a14.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="专辑页.html" class="text-ellipsis">文化常识专辑</a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a3.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="专辑页.html">
+                                                    <div class="center text-center m-t-n">
+                                                        <i class="iconfont icon-biji01 i-2x"></i>
+                                                    </div>
+                                                </a>
+                                                <div class="bottom padder m-b-sm text-sm text-center">
+                                                    <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                    <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                    <a href="#" class="m-l-sm" title="收藏">
+                                                        <i class="fa fa-star-o text"></i>
+                                                        <i class="fa fa-star text-active text-danger"></i>
+                                                        150
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="top">
+                                                <span class="badge bg-info m-t-sm m-r-sm pull-right">免费</span>
+                                            </div>
+                                            <a href=" 专辑页.html"><img src="public/images/a39.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="专辑页.html" class="text-ellipsis">词语辨析专辑 </a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a4.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="专辑页.html">
+                                                    <div class="center text-center m-t-n">
+                                                        <i class="iconfont icon-biji01 i-2x"></i>
+                                                    </div>
+                                                </a>
+                                                <div class="bottom padder m-b-sm text-sm text-center">
+                                                    <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                    <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                    <a href="#" class="m-l-sm" title="收藏">
+                                                        <i class="fa fa-star-o text"></i>
+                                                        <i class="fa fa-star text-active text-danger"></i>
+                                                        150
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="top">
+                                                <span class="badge bg-info m-t-sm m-r-sm pull-right">免费</span>
+                                            </div>
+                                            <a href="专辑页.html"><img src="public/images/a12.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="专辑页.html" class="text-ellipsis">文言字词专辑</a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="item">
+                                        <div class="pos-rlt">
+
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="专辑页.html">
+                                                    <div class="center text-center m-t-n">
+                                                        <i class="iconfont icon-biji01 i-2x"></i>
+                                                    </div>
+                                                </a>
+                                                <div class="bottom padder m-b-sm text-sm text-center">
+                                                    <a href="#" class="m-l-sm" title="学习人数"><i class="iconfont icon-crmtubiao32"></i>100</a>
+                                                    <a href="#" class="m-l-sm" title="贴包"><i class="iconfont icon-dianziqiabao"></i>35</a>
+                                                    <a href="#" class="m-l-sm" title="收藏">
+                                                        <i class="fa fa-star-o text"></i>
+                                                        <i class="fa fa-star text-active text-danger"></i>
+                                                        150
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="top">
+                                                <span class="badge bg-info m-t-sm m-r-sm pull-right">免费</span>
+                                            </div>
+                                            <a href="#"><img src="public/images/a13.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="专辑页.html" class="text-ellipsis">名句名篇专辑</a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a5.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                  <div class="row">
+                    <div class="col-md-9">
+                      <h3 class="font-thin col-lg-3 row">推荐贴包</h3>
+                      <ul class="col-lg-9 rec-div m-t-sm ">
+                          <li class="active"><a href="#recom3" data-toggle="tab">最新上线</a></li>
+                          <li><a href="#recom4" data-toggle="tab">最受欢迎</a></li>
+                      </ul>
+                      <div class="clearfix"></div>
+                      <div class="tab-content">
+                        <div class="row row-sm tab-pane active animated fadeIn" id="recom3">
+                        <div class="col-xs-6 col-sm-3">
+                          <div class="item panel b-l b-r b-b b-t">
+                              <div class="panel-body pad-tlr">
+                                <div class="pos-rlt">
+                                  <div class="item-overlay opacity r r-2x bg-black">
+                                      <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                      <div class="bottom padder m-b-sm xztext-12 text-center">
+                                         <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                         
+                                         <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                      </div>
+                                  </div>
+                                  <a href="#"><img src="public/images/m0.jpg" alt="" class="r r-2x img-full"></a>
+                                </div>
+                                <div class="padder-v">
+                                  <a href="贴子详情页.html" class="text-ellipsis">几何证明选讲图形图像贴包</a>
+                                  <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                  <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m1.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">情态动词</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m2.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">匀变速直线运动研究</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="贴子详情页.html"><img src="public/images/m3.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">新课标全国卷漫画赏析</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m4.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">文言实词贴包</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m5.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">元素化合物反应图像贴包</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                  <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="贴子详情页.html"><img src="public/images/m6.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">历史人物图像简介贴包</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m11.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">数列图形图像卡</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                       </div>
+                        <div class="row row-sm tab-pane animated fadeIn" id="recom4">
+
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m2.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">匀变速直线运动研究</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="贴子详情页.html"><img src="public/images/m3.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">新课标全国卷漫画赏析</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="item panel b-l b-r b-b b-t">
+                                    <div class="panel-body pad-tlr">
+                                        <div class="pos-rlt">
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                    <i class="iconfont icon-biji01 i-2x"></i>
+                                                </div></a>
+                                                <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                     <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                    
+                                                    <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                                </div>
+                                            </div>
+                                            <a href="#"><img src="public/images/m0.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="贴子详情页.html" class="text-ellipsis">几何证明选讲图形图像贴包</a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="item panel b-l b-r b-b b-t">
+                                    <div class="panel-body pad-tlr">
+                                        <div class="pos-rlt">
+                                            <div class="item-overlay opacity r r-2x bg-black">
+                                                <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                    <i class="iconfont icon-biji01 i-2x"></i>
+                                                </div></a>
+                                                <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                     <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                    
+                                                    <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                                </div>
+                                            </div>
+                                            <a href="#"><img src="public/images/m1.jpg" alt="" class="r r-2x img-full"></a>
+                                        </div>
+                                        <div class="padder-v">
+                                            <a href="贴子详情页.html" class="text-ellipsis">情态动词</a>
+                                            <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                            <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m4.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">文言实词贴包</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m5.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">元素化合物反应图像贴包</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="贴子详情页.html"><img src="public/images/m6.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">历史人物图像简介贴包</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="col-xs-6 col-sm-3">
+                              <div class="item panel b-l b-r b-b b-t">
+                                  <div class="panel-body pad-tlr">
+                                      <div class="pos-rlt">
+                                          <div class="item-overlay opacity r r-2x bg-black">
+                                              <a href="贴子详情页.html"><div class="center text-center m-t-n">
+                                                  <i class="iconfont icon-biji01 i-2x"></i>
+                                              </div></a>
+                                              <div class="bottom padder m-b-sm xztext-12 text-center">
+                                                   <a href="#" title="评论" class="pad-r10"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                  
+                                                  <a href="#" title="收藏"><i class="fa fa-star-o text"></i>68</a>
+                                              </div>
+                                          </div>
+                                          <a href="#"><img src="public/images/m11.jpg" alt="" class="r r-2x img-full"></a>
+                                      </div>
+                                      <div class="padder-v">
+                                          <a href="贴子详情页.html" class="text-ellipsis">数列图形图像卡</a>
+                                          <a href="个人主页.html" class=" text-xs text-muted pad-t5">郑浩然</a>
+                                          <a href="个人主页.html" class="pull-right"><img src="public/images/a1.png" class="img-circle img-sm"> </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+
+
+                    </div>
+                    <div class="col-md-3">
+                      <h3 class="font-thin">热门作者</h3>
+                      <div class="list-group bg-white list-group-lg no-bg auto">                          
+                        <a href="个人主页.html" class="list-group-item clearfix pad-tb18">
+                          <span class="pull-left thumb-sm avatar m-r">
+                            <img src="public/images/a0.png" alt="">
+                          </span>
+                          <span class="clear">
+                            <span>丁玲</span>
+                            <small class="text-muted xztext-12 clear text-ellipsis">成功就是坚持不住的时候，再坚持一下。</small>
+                          </span>
+                        </a>
+                        <a href="个人主页.html" class="list-group-item clearfix pad-tb18">
+                          <span class="pull-left thumb-sm avatar m-r">
+                            <img src="public/images/a1.png" alt="">
+                          </span>
+                          <span class="clear">
+                            <span>晓文lin</span>
+                            <small class="text-muted clear xztext-12 text-ellipsis">信仰比知识更难动摇；热爱比尊重更难变易。</small>
+                          </span>
+                        </a>
+                        <a href="个人主页.html" class="list-group-item clearfix pad-tb18">
+                          <span class="pull-left thumb-sm avatar m-r">
+                            <img src="public/images/a2.png" alt="">
+                          </span>
+                          <span class="clear">
+                            <span>师小蔡</span>
+                            <small class="text-muted xztext-12 clear text-ellipsis">别只顾着向后看，却没看到前面的路有多长。</small>
+                          </span>
+                        </a>
+                        <a href="个人主页.html" class="list-group-item clearfix pad-tb18">
+                          <span class="pull-left thumb-sm avatar m-r">
+                            <img src="public/images/a0.png" alt="">
+                          </span>
+                          <span class="clear">
+                            <span>汤名</span>
+                            <small class="text-muted xztext-12 clear text-ellipsis">这寒假过出了暑假的温度，过不出暑假的长度。</small>
+                          </span>
+                        </a>
+                        <a href="个人主页.html" class="list-group-item clearfix pad-tb18">
+                          <span class="pull-left thumb-sm avatar m-r">
+                            <img src="public/images/a4.png" alt="">
+                          </span>
+                          <span class="clear">
+                            <span>小小柒</span>
+                            <small class="text-muted xztext-12 clear text-ellipsis">把握当下！</small>
+                          </span>
+                        </a>
+                          <a href="个人主页.html" class="list-group-item clearfix pad-tb18">
+                          <span class="pull-left thumb-sm avatar m-r">
+                            <img src="public/images/a5.png" alt="">
+                          </span>
+                          <span class="clear">
+                            <span>子轩</span>
+                            <small class="text-muted xztext-12 clear text-ellipsis">向日葵盛开的夏天、空气中幸福泛滥。</small>
+                          </span>
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row m-t-lg m-b-lg">
+                    <div class="col-sm-6">
+                      <div class="bg-info wrapper-md r">
+                        <a href="用户登录.html">
+                          <span class="h4 m-b-xs block"><i class=" icon-user-follow i-lg"></i> 注册或登录账号</span>
+                          <span>保存您的学习记录，登陆后内容更加精彩</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="bg-success wrapper-md r">
+                        <a href="app下载.html">
+                          <span class="h4 m-b-xs block"><i class="icon-cloud-download i-lg"></i> 下载app客户端</span>
+                          <span>下载微学习贴app,享受随时随地的在线学习 .</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+              </section>
+            </section>
+            <!-- side content -->
+            <aside class="aside-md bg-light dk" id="sidebar">
+              <section class="vbox animated fadeInRight">
+                <section class="w-f-md scrollable hover" style="bottom: 40px;">
+                  <h4 class="font-thin m-l-md m-t">在线好友</h4>
+                  <ul class="list-group no-bg no-borders auto m-t-n-xxs">
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a1.png" alt="" class="img-circle">
+                       
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">墩小贤</a></div>
+                        <small class="text-muted">精疲力尽也就为了自己</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a2.png" alt="">
+                       
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">后青春期的诗</a></div>
+                        <small class="text-muted">漫天縱飛風花雪，月華</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a0.png" alt="">
+                        
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">吴达立</a></div>
+                        <small class="text-muted">绘画绘的是生活上的点滴</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a4.png" alt="">
+                        
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">深上深夏</a></div>
+                        <small class="text-muted">不畏将来，不念过去。</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a5.png" alt="" class="img-circle">
+                       
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">我是吉客</a></div>
+                        <small class="text-muted">忘了初衷就会变得平庸</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a6.png" alt="">
+                       
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">思维控</a></div>
+                        <small class="text-muted">设计是生活的一种想法。</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a7.png" alt="">
+                       
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">kimson黄堇杰</a></div>
+                        <small class="text-muted">面包会有的什么都会有的</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a8.png" alt="">
+                       
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">沙雨sr</a></div>
+                        <small class="text-muted">爱人不疑，疑人不爱。</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a9.png" alt="" class="img-circle">
+                        
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">卤蛋很好ci</a></div>
+                        <small class="text-muted">麦小强的小强很麦很好卖</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a1.png" alt="">
+                      
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">伍仁优</a></div>
+                        <small class="text-muted">每天面朝大海，春暖花开</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a2.png" alt="">
+                      
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">学会等待BEST</a></div>
+                        <small class="text-muted">趁着年轻赶紧行走吧。</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a0.png" alt="">
+                        
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">秦小敏</a></div>
+                        <small class="text-muted">一个充满着无限正能量</small>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+                <footer class="footer footer-md " style="bottom: -5px">
+                  <form class="" role="search">
+                    <div class="form-group clearfix m-b-none m-t">
+                      <div class="input-group m-b">
+                        <span class="input-group-btn">
+                          <button type="submit" class="btn btn-sm bg-empty text-muted btn-icon"><i class="fa fa-search"></i></button>
+                        </span>
+                        <input type="text" class="form-control input-sm bg-empty b-b b-dark no-border" placeholder="搜索用户">
+                      </div>
+                    </div>
+                  </form>
+                </footer>
+              </section>              
+            </aside>
+            <!-- / side content -->
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <!-- Bootstrap -->
+  <script src="public/js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="public/js/app.js"></script>
+  <script src="public/js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="public/js/app.plugin.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/demo.js"></script>
+  <script type="text/javascript">
+
+      var slider = new MasterSlider();
+      slider.setup('masterslider' , {
+          width:1024,
+          height:400,
+          //space:100,
+          fullwidth:true,
+          centerControls:false,
+          speed:18,
+          view:'flow',
+          autoplay:true
+      });
+      //slider.control('arrows');
+      slider.control('bullets' ,{autohide:false});
+
+      $('#myTab a').click(function (e) {
+          e.preventDefault()
+          $(this).tab('show')
+      });
+
+      SyntaxHighlighter.all();
+
+  </script>
+</body>
+</html>

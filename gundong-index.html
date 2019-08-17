@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery锚点带动画跳转和返回顶部</title>
+<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<link href="css/christmas.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+	
+   $(".index_nav li a").click(function(event) { 
+      var index=this.title
+      var id='#'+'index_'+index
+     $("html,body").animate({scrollTop: $(id).offset().top}, 900);
+   });
+   $(".taoba").click(function(event) { 
+      var index=this.title
+      var id='#'+'index_'+index
+     $("html,body").animate({scrollTop: $(id).offset().top}, 900);
+   });
+   function a(x,y){
+    l = $('#main').offset().left;
+    w = $('#main').width();
+    $('#tbox').css('left',(l + w + x) + 'px');
+    $('#tbox').css('bottom',y + 'px');
+}//获取#tbox的div距浏览器底部和页面内容区域右侧的距离函数#main为页面的可视宽度
+  });
+</script>
+</head>
+<body>
+<div>
+  <ul class="index_nav" style="position:fixed; right:0">
+    <li><a href="javascript:void(0)" title="1"><i>活动</i><strong>1</strong></a></li>
+    <li><a href="javascript:void(0)" title="2"><i>活动</i><strong>2</strong></a></li>
+    <li><a href="javascript:void(0)" title="3"><i>活动</i><strong>3</strong></a></li>
+    <li><a href="javascript:void(0)" title="4"><i>活动</i><strong>4</strong></a></li>
+    <li><a href="javascript:void(0)" title="5"><i>活动</i><strong>5</strong></a></li>
+  </ul>
+</div>
+<div class="h50"></div>
+<div class="row" id="main">
+  <h2 id="index_1">这是第一个活动页</h2>
+ 
+  <div class="mainpage mainpage1">
+    </div>
+  
+
+
+</div>
+<div class="h15"></div>
+<div class="row">
+  <h2 id="index_2">这是第二个活动页</h2>
+ 
+  <div class="mainpage mainpage2">
+   
+    </div>
+  
+
+
+</div>
+<div class="h15"></div>
+<div class="row">
+  <h2 id="index_3">这是第三个活动页</h2>
+ 
+  <div class="mainpage mainpage3">
+   
+    </div>
+  
+
+
+</div>
+<div class="h15"></div>
+<div class="row">
+  <h2 id="index_4">这是第四个活动页</h2>
+ 
+  <div class="mainpage mainpage4">
+   
+    </div>
+  
+
+
+</div>
+<div class="h15"></div>
+<div class="row">
+  <h2 id="index_5">这是第五个活动页</h2>
+ 
+  <div class="mainpage mainpage5">
+
+   
+    </div>
+  
+
+
+</div>
+
+</body>
+
+</html>

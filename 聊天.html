@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>微学习贴</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="public/js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="public/fonts/iconfont.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/app.css" type="text/css" />
+   <link rel="stylesheet" href="card/css/layerout.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="public/js/ie/html5shiv.js"></script>
+    <script src="public/js/ie/respond.min.js"></script>
+    <script src="public/js/ie/excanvas.js"></script>
+  <![endif]-->
+    <script src="public/js/jquery.min.js"></script>
+</head>
+<body class="">
+  <section class="vbox">
+    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-info">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+          <i class="fa fa-bookmark"></i>
+          <span class="hidden-nav-xs m-l-sm font-thin">微学习贴</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="icon-settings"></i>
+        </a>
+      </div>
+        
+        <ul class="nav navbar-nav hidden-xs">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                    <i class="fa fa-th"></i>
+                </a>
+                <section class="dropdown-menu aside-lg bg-white on animated fadeInRight" >
+                    <div class="row m-l-none m-r-none m-t m-b text-center">
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-pencil-square-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习刊</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-laptop fa-2x text-danger-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习贴</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa  fa-folder-open-o fa-2x text-success-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学教材</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-calendar-o fa-2x text-info-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学课程</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-bar-chart-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学测试</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-list-alt fa-2x text-warning-lter"></i>
+                    </span>
+                                    <small class="text-muted">微学应用</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left input-s-lg m-l-n-xs hidden-xs" role="search" style="height: 25px;">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control input-sm btn-rounded" placeholder="搜索...">
+                     <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default btn-sm btn-rounded"><i class="fa fa-search"></i></button>
+                     </span>
+                </div>
+            </div>
+        </form>
+      <div class="navbar-right ">
+        <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+          <li class="hidden-xs">
+            <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
+              <i class="icon-bell"></i>
+              <span class="badge badge-sm up bg-danger">3</span>
+            </a>
+            <section class="dropdown-menu aside-xl animated fadeInUp">
+              <section class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>你有 <span >3</span> 条未读消息</strong>
+                </div>
+                <div class="list-group list-group-alt">
+                    <a href="#" class="media list-group-item">
+                    <span class="media-body block m-b-none">
+                      黄晓明 关注了你<br>
+                      <small class="text-muted">10 分钟前</small>
+                    </span>
+                    </a>
+                  <a href="#" class="media list-group-item">
+                    <span class="media-body block m-b-none">
+                      刘亦菲 评论了你<br>
+                      <small class="text-muted">10 分钟前</small>
+                    </span>
+                  </a>
+                  <a href="#" class="media list-group-item">
+                    <span class="media-body block m-b-none">
+                      邓超 给你发了条私信<br>
+                      <small class="text-muted">1 小时前</small>
+                    </span>
+                  </a>
+                </div>
+                <!--<div class="panel-footer text-sm">
+                  <a href="#" class="pull-right"><i class="fa fa-cog"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a>
+                </div>-->
+              </section>
+            </section>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="public/images/a0.png" alt="...">
+              </span>
+                            刘语熙 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">            
+              <li>
+                <span class="arrow top"></span>
+                <a href="#">微学习屋</a>
+              </li>
+              <li>
+                <a href="#">账号设置</a>
+              </li>
+              <li>
+                <a href="#">帮助</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="用户登录.html" >退出</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
+    </header>
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-black dk aside hidden-print" id="nav">
+          <section class="vbox"> <section class="w-f-md scrollable hover">
+              <div class="" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs">
+                  <ul class="nav bg clearfix"  data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                          发现
+                    </li>
+                    <li>
+                      <a href="index.html">
+                        <i class="icon-disc icon text-success"></i>
+                        <span class="font-thin">最新推荐</span>
+                      </a>
+                    </li>
+                    <li class="active">
+                      <a href="#">
+                         <!--<span class="pull-right text-muted">
+                          <i class="fa fa-circle-o text-sm text"></i>
+                          <i class="fa fa-circle text-sm text-active"></i>
+                        </span>-->
+                        <i class="icon-book-open icon text-info"></i>
+                        <span class="font-thin">分类发现</span>
+                      </a>
+                        <ul class="nav xz-nav">
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>语文类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>数学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>英语类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>物理类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>化学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>生物类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>历史类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>政治类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>地理类</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                     <!--
+                    <li>
+                      <a href="班级.html">
+                        <i class="icon-users icon text-primary-lter"></i>
+
+                        <span class="font-thin">热门班级</span>
+                      </a>
+                    </li>-->
+
+                    <li class="m-b hidden-nav-xs"></li>
+                  </ul>
+                  <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                       最近在学
+                    </li>
+                     <li >
+                      <a href="贴子详情页.html" class="auto">
+                        <i class="icon-folder-alt icon">
+                        </i>
+                        <span>基本初等函数Ⅰ图像</span>
+                      </a>
+                    </li>
+                      <li >
+                          <a href="贴子详情页.html" class="auto">
+                              <i class="icon-folder-alt icon">
+                              </i>
+                              <span>数列图形图像卡</span>
+                          </a>
+                      </li>
+                      <li>
+                            <a href="贴子详情页.html" class="auto">
+                                <i class="icon-folder-alt icon">
+                                </i>
+                                <span>常用短语学习贴包</span>
+                            </a>
+                        </li>
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+            <footer class="footer hidden-xs no-padder text-center-nav-xs">
+              <div class="bg hidden-xs ">
+                  <div class="dropdown dropup wrapper-sm clearfix">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="thumb-sm avatar pull-left m-l-xs">                        
+                        <img src="public/images/a0.png" class="dker" alt="...">
+                        <i class="on b-black"></i>
+                      </span>
+                      <span class="hidden-nav-xs clear">
+                        <span class="block m-l">
+                          <strong class="font-bold text-lt">刘语熙</strong>
+                          <b class="caret"></b>
+                        </span>
+                        <span class="text-muted text-xs block m-l">持之以恒</span>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight aside text-left">                      
+                      <li>
+                        <span class="arrow bottom hidden-nav-xs"></span>
+                        <a href="#">微学习屋</a>
+                      </li>
+                      <li>
+                        <a href="#">账号设置</a>
+                      </li>
+                      <li>
+                        <a href="#">帮助</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="用户登录.html" >退出</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>            </footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+        <section id="content">
+          <section class="hbox stretch">
+            <section>
+                <section class="vbox">
+                    <header class="header bg-light lt b-b b-light">
+                        <p>与 <strong>王红艳</strong> 聊天</p>
+                    </header>
+                    <section class="w-f scrollable wrapper">
+                        <section class="chat-list">
+                            <article class="chat-item left">
+                                <a href="个人主页.html" class="pull-left thumb-sm avatar"><img src="public/images/a2.png"></a>
+                                <section class="chat-body">
+                                    <div class="panel b-light text-sm m-b-none">
+                                        <div class="panel-body" style="padding:8px 8px 0px 8px; line-height:25px;">
+                                            <span class="arrow left"></span>
+                                            <p class="m-b-none">我很喜欢你发布的卡片，学到很多东西  </p>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted block m-t-sm"><i class="fa fa-ok text-success"></i> 1 小时前</small>
+                                </section>
+                            </article>
+                            <article class="chat-item right">
+                                <a href="#" class="pull-right thumb-sm avatar"><img src="public/images/a0.png" class="img-circle"></a>
+                                <section class="chat-body">
+                                    <div class="panel bg-light dk text-sm m-b-none">
+                                        
+                                        <div class="panel-body" style="padding:8px 8px 0px 8px; line-height:25px;">
+                                            <span class="arrow right"></span>
+                                            <p class="m-b-none">还有一些性能技巧，仔细学完这些卡片，你会提高很多 :)</p>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted block m-t-sm">30 分钟以前</small>
+                                </section>
+                            </article>
+                            <article class="chat-item left">
+                                <a href="个人主页.html" class="pull-left thumb-sm avatar"><img src="public/images/a2.png"></a>
+                                <section class="chat-body">
+                                    <div class="panel b-light text-sm m-b-none">
+                                        <div class="panel-body" style="padding:8px 8px 0px 8px; line-height:25px;">
+                                            <span class="arrow left"></span>
+                                            <p class="m-b-none">不错，朋友正在学习中。随身学习必备 <i class="fa fa-lg fa-smile-o text-success"></i></p>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted"><i class="fa fa-ok text-success"></i> 12 分钟以前</small>
+                                </section>
+                            </article>
+                            <article class="chat-item right">
+                                <a href="#" class="pull-right thumb-sm avatar"><img src="public/images/a0.png" class="img-circle"></a>
+                                <section class="chat-body">
+                                    <div class="panel bg-light dk text-sm m-b-none">
+                                        <div class="panel-body" style="padding:8px 8px 0px 8px; line-height:25px;">
+                                            <span class="arrow right"></span>
+                                            <p class="m-b-none">谢谢你的支持，卡片还在不断完善中，大家一起学习提高 </p>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted block m-t-sm">5 分钟以前</small>
+                                </section>
+                            </article>
+                            <article class="chat-item right">
+                                <a href="#" class="pull-right thumb-sm avatar"><img src="public/images/a0.png" class="img-circle"></a>
+                                <section class="chat-body">
+                                    <div class="panel bg-light dk text-sm m-b-none">
+                                        <div class="panel-body" style="padding:8px 8px 0px 8px; line-height:25px;">
+                                            <span class="arrow right"></span>
+                                            <p class="m-b-none">创作是生活的一种想法，是生活上的点滴。.</p>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted block m-t-sm">3 分钟以前</small>
+                                </section>
+                            </article>
+                            <article class="chat-item left">
+                                <a href="个人主页.html" class="pull-left thumb-sm avatar"><img src="public/images/a2.png"></a>
+                                <section class="chat-body">
+                                    <div class="panel b-light text-sm m-b-none">
+                                        <div class="panel-body" style="padding:8px 8px 0px 8px; line-height:25px;">
+                                            <span class="arrow left"></span>
+                                            <p class="m-b-none">我们班上的很多同学都在看你创作的卡片，回头大家一起多交流. </p>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted block m-t-sm"><i class="fa fa-ok text-success"></i> 2 分钟以前</small>
+                                </section>
+                            </article>
+                            <article class="chat-item right">
+                                <a href="#" class="pull-right thumb-sm avatar"><img src="public/images/a0.png" class="img-circle"></a>
+                                <section class="chat-body">
+                                    <div class="panel bg-light dk text-sm m-b-none">
+                                        <div class="panel-body" style="padding:8px 8px 0px 8px; line-height:25px;">
+                                            <span class="arrow right"></span>
+                                            <p class="m-b-none">好的，回头大家多交流，大家的提高是对我最大的鼓励。.</p>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted block m-t-sm">刚刚</small>
+                                </section>
+                            </article>
+                        </section>
+                    </section>
+                    <footer class="footer bg-light lt b-t b-light">
+                        <form action="" class="m-t-sm">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm rounded" placeholder="说点什么">
+                      <span class="input-group-btn">
+                        <button class="btn btn-sm btn-info font-bold btn-rounded" type="button">发送</button>
+                      </span>
+                            </div>
+                        </form>
+                    </footer>
+                </section>
+            </section>
+            <!-- side content -->
+            <aside class="aside-md bg-light dk" id="sidebar">
+              <section class="vbox animated fadeInRight">
+                <section class="scrollable hover">
+                  <h4 class="font-thin m-l-md m-t">在线好友</h4>
+                  <ul class="list-group no-bg no-borders auto m-t-n-xxs">
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a1.png" alt="..." class="img-circle">
+                        <i class="on b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">墩小贤</a></div>
+                        <small class="text-muted">精疲力尽也就为了自己..</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a2.png" alt="...">
+                        <i class="on b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">后青春期的诗</a></div>
+                        <small class="text-muted">漫天縱飛風花雪，月華...</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a0.png" alt="...">
+                        <i class="busy b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">吴达立</a></div>
+                        <small class="text-muted">绘画绘的是生活上的点滴</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a4.png" alt="...">
+                        <i class="away b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">深上深夏</a></div>
+                        <small class="text-muted">不畏将来，不念过去。</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a5.png" alt="..." class="img-circle">
+                        <i class="on b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">我是吉客</a></div>
+                        <small class="text-muted">忘了初衷就会变得平庸</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a6.png" alt="...">
+                        <i class="on b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">思维控</a></div>
+                        <small class="text-muted">设计是生活的一种想法。</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a7.png" alt="...">
+                        <i class="busy b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">kimson黄堇杰</a></div>
+                        <small class="text-muted">面包会有的什么都会有的</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a8.png" alt="...">
+                        <i class="away b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">沙雨sr</a></div>
+                        <small class="text-muted">爱人不疑，疑人不爱。</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a9.png" alt="..." class="img-circle">
+                        <i class="on b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">卤蛋很好ci</a></div>
+                        <small class="text-muted">麦小强的小强很麦很好卖</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a1.png" alt="...">
+                        <i class="on b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">伍仁优</a></div>
+                        <small class="text-muted">每天面朝大海，春暖花开</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a2.png" alt="...">
+                        <i class="busy b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">学会等待BEST</a></div>
+                        <small class="text-muted">趁着年轻赶紧行走吧。</small>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <span class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+                        <img src="public/images/a0.png" alt="...">
+                        <i class="away b-light right sm"></i>
+                      </span>
+                      <div class="clear">
+                        <div><a href="聊天.html">秦小敏</a></div>
+                        <small class="text-muted">一个充满着无限正能量</small>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+              </section>              
+            </aside>
+            <!-- / side content -->
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <!-- Bootstrap -->
+  <script src="public/js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="public/js/app.js"></script>
+  <script src="public/js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="public/js/app.plugin.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/demo.js"></script>
+</body>
+</html>

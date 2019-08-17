@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>  
+  <meta charset="utf-8" />
+  <title>微学习贴</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="public/js/jPlayer/jplayer.flat.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="public/fonts/iconfont.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/app.css" type="text/css" />
+   <link rel="stylesheet" href="card/css/layerout.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="public/js/ie/html5shiv.js"></script>
+    <script src="public/js/ie/respond.min.js"></script>
+    <script src="public/js/ie/excanvas.js"></script>
+  <![endif]-->
+    <script src="public/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //收藏
+            var aa=true;
+            $(".scadd").click(function () {
+                if(aa){
+                    var i = $(this);
+                    i.addClass("on");
+                    i.html('<i class="fa fa-star"></i> 已收藏' + '(31)');
+                    aa=false;
+                }else{
+                    var i = $(this);
+                    i.html('<i class="fa fa-star-o"></i> 收藏' + '(30)');
+                    i.removeClass("on");
+                    aa=true;
+                }
+            });
+            //点赞
+
+            var aa=true;
+            $(".dianzan").click(function () {
+                if(aa){
+                    var i = $(this);
+                    i.addClass("on");
+                    i.html('<i class="fa fa-thumbs-up"></i> 已赞' + '(16)');
+                    aa=false;
+                }else{
+                    var i = $(this);
+                    i.html('<i class="fa fa-thumbs-o-up"></i> 点赞' + '(15)');
+                    i.removeClass("on");
+                    aa=true;
+                }
+            });
+
+        });
+
+    </script>
+</head>
+<body class="">
+  <section class="vbox">
+    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside bg-info">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="icon-list"></i>
+        </a>
+        <a href="index.html" class="navbar-brand text-lt">
+          <i class="fa fa-bookmark"></i>
+          <span class="hidden-nav-xs m-l-sm font-thin">微学习贴</span>
+        </a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+          <i class="icon-settings"></i>
+        </a>
+      </div>
+        
+        <ul class="nav navbar-nav hidden-xs">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                    <i class="fa fa-th"></i>
+                </a>
+                <section class="dropdown-menu aside-lg bg-white on animated fadeInRight" >
+                    <div class="row m-l-none m-r-none m-t m-b text-center">
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-pencil-square-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习刊</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-laptop fa-2x text-danger-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学习贴</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa  fa-folder-open-o fa-2x text-success-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学教材</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-calendar-o fa-2x text-info-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学课程</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-bar-chart-o fa-2x text-primary-lt"></i>
+                    </span>
+                                    <small class="text-muted">微学测试</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="padder-v">
+                                <a href="#">
+                    <span class="m-b-xs block">
+                      <i class="fa fa-list-alt fa-2x text-warning-lter"></i>
+                    </span>
+                                    <small class="text-muted">微学应用</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left input-s-lg m-l-n-xs hidden-xs" role="search" style="height: 25px;">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control input-sm btn-rounded" placeholder="搜索...">
+                     <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default btn-sm btn-rounded"><i class="fa fa-search"></i></button>
+                     </span>
+                </div>
+            </div>
+        </form>
+      <div class="navbar-right ">
+        <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+          <li class="hidden-xs">
+            <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
+              <i class="icon-bell"></i>
+              <span class="badge badge-sm up bg-danger">3</span>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">
+                  <li>
+                      <span class="arrow "></span>
+                      <a href="#"><span class="badge bg-danger pull-right">5</span> 系统通知</a>
+                  </li>
+                  <li>
+                      <a href="#"><span class="badge bg-danger pull-right">12</span>私信 </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                           好友请求
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          聊天
+                      </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                      <a href="#">消息设置</a>
+                  </li>
+
+
+              </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="public/images/a0.png" alt="...">
+              </span>
+                            刘语熙 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">            
+              <li>
+                <span class="arrow top"></span>
+                <a href="#">微学习屋</a>
+              </li>
+              <li>
+                <a href="#">账号设置</a>
+              </li>
+              <li>
+                <a href="#">帮助</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="用户登录.html" >退出</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>      
+    </header>
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-black dk aside hidden-print" id="nav">
+          <section class="vbox"> <section class="w-f-md scrollable hover">
+              <div class="" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+                
+                <!-- nav -->                 
+                <nav class="nav-primary hidden-xs">
+                  <ul class="nav bg clearfix"  data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                          发现
+                    </li>
+                    <li>
+                      <a href="index.html">
+                        <i class="icon-disc icon text-success"></i>
+                        <span class="font-thin">最新推荐</span>
+                      </a>
+                    </li>
+                    <li class="active">
+                      <a href="#">
+                         <!--<span class="pull-right text-muted">
+                          <i class="fa fa-circle-o text-sm text"></i>
+                          <i class="fa fa-circle text-sm text-active"></i>
+                        </span>-->
+                        <i class="icon-book-open icon text-info"></i>
+                        <span class="font-thin">分类发现</span>
+                      </a>
+                        <ul class="nav xz-nav">
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>语文类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>数学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>英语类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="科目分类.html" class="auto">
+
+
+                                    <span>物理类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>化学类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>生物类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>历史类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>政治类</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="#" class="auto">
+
+
+                                    <span>地理类</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                     <!--
+                    <li>
+                      <a href="班级.html">
+                        <i class="icon-users icon text-primary-lter"></i>
+
+                        <span class="font-thin">热门班级</span>
+                      </a>
+                    </li>-->
+
+                    <li class="m-b hidden-nav-xs"></li>
+                  </ul>
+                  <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                       最近在学
+                    </li>
+                     <li >
+                      <a href="贴子详情页.html" class="auto">
+                        <i class="icon-folder-alt icon">
+                        </i>
+                        <span>基本初等函数Ⅰ图像</span>
+                      </a>
+                    </li>
+                      <li >
+                          <a href="贴子详情页.html" class="auto">
+                              <i class="icon-folder-alt icon">
+                              </i>
+                              <span>数列图形图像卡</span>
+                          </a>
+                      </li>
+                      <li>
+                            <a href="贴子详情页.html" class="auto">
+                                <i class="icon-folder-alt icon">
+                                </i>
+                                <span>常用短语学习贴包</span>
+                            </a>
+                        </li>
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+            <footer class="footer hidden-xs no-padder text-center-nav-xs">
+              <div class="bg hidden-xs ">
+                  <div class="dropdown dropup wrapper-sm clearfix">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="thumb-sm avatar pull-left m-l-xs">                        
+                        <img src="public/images/a0.png" class="dker" alt="...">
+                        <i class="on b-black"></i>
+                      </span>
+                      <span class="hidden-nav-xs clear">
+                        <span class="block m-l">
+                          <strong class="font-bold text-lt">刘语熙</strong>
+                          <b class="caret"></b>
+                        </span>
+                        <span class="text-muted text-xs block m-l">持之以恒</span>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight aside text-left">                      
+                      <li>
+                        <span class="arrow bottom hidden-nav-xs"></span>
+                        <a href="#">微学习屋</a>
+                      </li>
+                      <li>
+                        <a href="#">账号设置</a>
+                      </li>
+                      <li>
+                        <a href="#">帮助</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="modal.lockme.html" data-toggle="ajaxModal" >退出</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>            </footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+        <section id="content">
+          <section class="hbox stretch">
+
+            <section>
+              <section class="vbox">
+                <section class="scrollable padder-lg ">
+                    <div class="col-lg-12 m-t" style="padding: 0;">
+                        <!-- .breadcrumb -->
+                        <ul class="breadcrumb">
+                            <li><a href="index.html"><i class="fa fa-home"></i> 首页</a></li>
+                            <li><a href="专辑页.html"> 高中数学图形图像卡专辑</a></li>
+                            <li class="active">基本初等函数Ⅰ图像贴包</li>
+                        </ul>
+                        <!-- / .breadcrumb -->
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="panel wrapper-lg">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img src="public/images/m8.jpg" class="img-full m-b" >
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <h3 class="m-t-none text-hui">基本初等函数Ⅰ图像贴包</h3>
+                                     
+                                        
+                                        <div class="text-muted">
+                                                <i class="fa fa-user icon-muted"></i> 创建人： <a href="个人主页.html" class="m-r-sm">汤明</a>
+                                                <i class="fa fa-clock-o icon-muted"> </i> 创建时间： 2015-06-20
+                                            </div>
+                                            
+                                        <div class="m-b-sm mar_t10 mar-b0">
+                                            <span>学习人数：456</span><span class="m-md">卡片数量：25</span><span>学习难度：中等</span>
+                                        </div>
+                                        <div class="m-b-sm mar_0 ">
+                                            <a href="#" class="btn btn-info m-r-sm m-t-sm m-b-sm scadd">
+                                                <i class="fa fa-star-o text"></i> 收藏(30)
+                                                
+                                            </a>
+                                             <a href="#" class="btn btn-info m-r-sm m-t-sm m-b-sm dianzan">
+                                                <i class="fa fa-thumbs-o-up text"></i> 点赞(15)
+                                                
+                                            </a>
+                                            <a href="DetailsPage/card_details2.html" class="btn btn-success m-r-sm m-t-sm m-b-sm"><i class="icon icon-control-play"></i> 开始学习</a>
+                                        </div>
+                                        <div>
+                                            标签:  <a href="搜索.html" class="badge bg-light">记忆卡</a> <a href="搜索.html" class="badge bg-light">英语单词</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="m-t-sm" style="line-height: 25px;">
+                                    <p><span class="font-bold">贴包简介：</span>本卡片汇集高中数学函数部分图像，图像与函数名称正反对应，便于学生直观理解记忆，使学生对基本初等函数的理解更进一步，从而有效提升学习效率。</p>
+                                </div>
+                                <h4 class="m-t-lg m-b">卡片列表</h4>
+                                <ul class="list-group list-group-lg">
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>二次函数y=ax2+bx+c（a>0）的图像</span>
+                                                
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>二次函数y=ax2+bx+c（a<0）的图像</span>
+                                                
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>增函数的图像特征</span>
+                                                
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>减函数的图像特征</span>
+
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>指数函数y=ax（a>1）的图像</span>
+
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>指数函数y=ax（0<a<1）的图像</span>
+
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>对数函数y=logax（a>1）的图像</span>
+
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>对数函数y=logax（0<a<1）的图像</span>
+
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>幂函数y=xa在第一象限内的图像</span>
+
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            <div class="clear text-ellipsis">
+                                                <i class="icon-credit-card m-r-sm"></i>
+                                                <span>5种常见幂函数的图像</span>
+
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <div class="text-center" style="padding: 0; margin: 0">
+                                    <ul class="pagination pagination" style="margin-bottom: 0">
+                                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <h4 class="panel-heading" style="margin:0;">相关贴包</h4>
+                                <div class="panel-body">
+                                
+                                
+                                
+                                    <article class="media ">
+                                            <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs">
+                                                <img src="public/images/m10.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <a href="贴子详情页.html" class="font-semibold">解三角形图形图像贴包</a>
+                                                <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                    <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                     <a href="#" title="赞" data-toggle="class" class="m-l-sm m-r-sm"><i class="iconfont icon-dianzan text"></i>
+                                                        <i class="iconfont icon-zan  text-active text-danger"></i>
+                                                        35</a>
+                                                    <a href="#" title="收藏" data-toggle="class">
+                                                    <i class="fa fa-star-o text"></i>
+                                                    <i class="fa fa-star text-active text-danger"></i>
+                                                    150
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </article>
+
+
+                                    <article class="media ">
+                                            <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs">
+                                                <img src="public/images/m11.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <a href="贴子详情页.html" class="font-semibold">数列图形图像贴包</a>
+                                                <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                    <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                     <a href="#" title="赞" data-toggle="class" class="m-l-sm m-r-sm"><i class="iconfont icon-dianzan text"></i>
+                                                        <i class="iconfont icon-zan  text-active text-danger"></i>
+                                                        35</a>
+                                                    <a href="#" title="收藏" data-toggle="class">
+                                                    <i class="fa fa-star-o text"></i>
+                                                    <i class="fa fa-star text-active text-danger"></i>
+                                                    150
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <article class="media ">
+                                            <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs">
+                                                <img src="public/images/m12.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <a href="贴子详情页.html" class="font-semibold">平面向量图形图像贴包</a>
+                                                <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                    <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                     <a href="#" title="赞" data-toggle="class" class="m-l-sm m-r-sm"><i class="iconfont icon-dianzan text"></i>
+                                                        <i class="iconfont icon-zan  text-active text-danger"></i>
+                                                        35</a>
+                                                    <a href="#" title="收藏" data-toggle="class">
+                                                    <i class="fa fa-star-o text"></i>
+                                                    <i class="fa fa-star text-active text-danger"></i>
+                                                    150
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </article>
+
+
+                                        <article class="media ">
+                                            <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs">
+                                                <img src="public/images/m13.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <a href="贴子详情页.html" class="font-semibold">立体几何图形图像贴包</a>
+                                                <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                    <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                     <a href="#" title="赞" data-toggle="class" class="m-l-sm m-r-sm"><i class="iconfont icon-dianzan text"></i>
+                                                        <i class="iconfont icon-zan  text-active text-danger"></i>
+                                                        35</a>
+                                                    <a href="#" title="收藏" data-toggle="class">
+                                                    <i class="fa fa-star-o text"></i>
+                                                    <i class="fa fa-star text-active text-danger"></i>
+                                                    150
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </article>
+
+
+                                        <article class="media ">
+                                            <a href="贴子详情页.html" class="pull-left thumb-md m-t-xs">
+                                                <img src="public/images/m14.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <a href="贴子详情页.html" class="font-semibold">解析几何图形图像贴包</a>
+                                                <div class="text-xs block m-t-xs">创建人：<a href="个人主页.html">李明</a></div>
+                                                <div class="m-t-sm text-sm xztext-12 font-hs">
+                                                    <a href="#" title="评论"><i class="iconfont icon-xiaoxi"></i>56</a>
+                                                     <a href="#" title="赞" data-toggle="class" class="m-l-sm m-r-sm"><i class="iconfont icon-dianzan text"></i>
+                                                        <i class="iconfont icon-zan  text-active text-danger"></i>
+                                                        35</a>
+                                                    <a href="#" title="收藏" data-toggle="class">
+                                                    <i class="fa fa-star-o text"></i>
+                                                    <i class="fa fa-star text-active text-danger"></i>
+                                                    150
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <h4 class="panel-heading" style="margin:0;">相关评论<span class="badge pull-right">3 条评论</span></h4>
+                                <div class="panel-body">
+                                    <section class="comment-list block" style="position: static;">
+                                        <div id="#comment-id-1" class="b-b m-b">
+                                            <article class="comment-item">
+                                            <a class="pull-left thumb-sm">
+                                                <img src="public/images/a0.png" class="img-circle">
+                                            </a>
+                                            <section class="comment-body m-b">
+                                                <header>
+                                                    <a href="个人主页.html"><strong>子轩</strong></a>
+                                                    <span class="text-muted text-xs pull-right m-t-xs">
+                                                      15 分钟之前
+                                                    </span>
+                                                </header>
+                                                <div class="m-t-sm h6">我很喜欢你发的卡片，学到很多东西</div>
+                                                <div class="comment-action m-t-sm">
+                                                    <a href="#comment-form" class="btn btn-default btn-xs">
+                                                        <i class="fa fa-mail-reply text-muted"></i> 回复
+                                                    </a>
+                                                </div>
+                                            </section>
+                                        </article>
+                                            <!-- .comment-reply -->
+                                            <article class="comment-item comment-reply">
+                                                <a class="pull-left thumb-sm">
+                                                    <img src="public/images/a3.png" class="img-circle">
+                                                </a>
+                                                <section class="comment-body m-b">
+                                                    <header>
+                                                        <a href="个人主页.html"><strong>沙雨</strong></a>
+                                                        <span class="text-muted text-xs pull-right m-t-xs">
+                                                          20 分钟之前
+                                                        </span>
+                                                    </header>
+                                                    <div class="m-t-sm h6">随身学习必背呀~</div>
+
+                                                </section>
+                                            </article>
+                                            <!-- / .comment-reply -->
+                                        </div>
+                                        <div id="#comment-id-2" class="b-b m-b">
+                                            <article class="comment-item">
+                                            <a class="pull-left thumb-sm">
+                                                <img src="public/images/a0.png" class="img-circle">
+                                            </a>
+                                            <section class="comment-body m-b">
+                                                <header>
+                                                    <a href="个人主页.html"><strong>子轩</strong></a>
+                                                    <span class="text-muted text-xs pull-right m-t-xs">
+                                                      15 分钟之前
+                                                    </span>
+                                                </header>
+                                                <div class="m-t-sm h6">好东西，值得学习！</div>
+                                                <div class="comment-action m-t-sm">
+                                                    <a href="#comment-id-2" data-dismiss="alert" class="btn btn-default btn-xs">
+                                                        <i class="fa fa-trash-o text-muted"></i>
+                                                        删除
+                                                    </a>
+                                                    <a href="#comment-form" class="btn btn-default btn-xs">
+                                                        <i class="fa fa-mail-reply text-muted"></i> 回复
+                                                    </a>
+                                                </div>
+                                            </section>
+                                        </article>
+                                            <!-- .comment-reply -->
+                                            <article class="comment-item comment-reply">
+                                                <a class="pull-left thumb-sm">
+                                                    <img src="public/images/a4.png" class="img-circle">
+                                                </a>
+                                                <section class="comment-body m-b">
+                                                    <header>
+                                                        <a href="个人主页.html"><strong>王晓琳</strong></a>
+                                                        <span class="text-muted text-xs pull-right m-t-xs">
+                                                          20 分钟之前
+                                                        </span>
+                                                    </header>
+                                                    <div class="m-t-sm h6">对学习有很大帮助！</div>
+                                                </section>
+                                            </article>
+                                                <!-- / .comment-reply -->
+                                        </div>
+                                        <div id="#comment-id-3" class="b-b m-b">
+                                            <article class="comment-item">
+                                            <a class="pull-left thumb-sm">
+                                                <img src="public/images/a0.png" class="img-circle">
+                                            </a>
+                                            <section class="comment-body m-b">
+                                                <header>
+                                                    <a href="个人主页.html"><strong>子轩</strong></a>
+                                                    <span class="text-muted text-xs pull-right m-t-xs">
+                                                      15 分钟之前
+                                                    </span>
+                                                </header>
+                                                <div class="m-t-sm h6">我很喜欢你发的卡片，学到很多东西</div>
+                                                <div class="comment-action m-t-sm">
+                                                    <a href="#comment-form" class="btn btn-default btn-xs">
+                                                        <i class="fa fa-mail-reply text-muted"></i> 回复
+                                                    </a>
+                                                </div>
+                                            </section>
+                                        </article>
+                                            <!-- .comment-reply -->
+                                        </div>
+                                        <div class="text-center">
+                                            <ul class="pagination pagination-sm m-t">
+                                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                    <article id="comment-form">
+
+                                        <div class="form-group">
+                                            <label>评论</label>
+                                            <textarea class="form-control" rows="3" placeholder="输入评论内容"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-info">发表评论</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+
+              </section>
+            </section>
+            <!-- side content -->
+
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+        </section>
+      </section>
+    </section>    
+  </section>
+  <!-- Bootstrap -->
+  <script src="public/js/bootstrap.js"></script>
+  <!-- App -->
+  <script src="public/js/app.js"></script>
+  <script src="public/js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="public/js/app.plugin.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="public/js/jPlayer/demo.js"></script>
+</body>
+</html>
